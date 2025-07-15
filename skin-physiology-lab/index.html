@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Physiology Research Laboratory | Dongwon Kim Lab</title>
+    <meta name="description" content="Skin Physiology Research Laboratory, Dongseo University. Research on skin regeneration, atopic dermatitis, and bioactivity validation." />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/src/index.css" rel="stylesheet">
+    <style>
+      body { font-family: 'Noto Sans KR', sans-serif; background: #f8fafc; color: #64748B; margin: 0; }
+      .container { max-width: 700px; margin: 40px auto; background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 8px 0 rgba(100,116,139,0.08); padding: 2.5rem; }
+      h1 { color: #2563eb; font-size: 2.5rem; margin-bottom: 0.5rem; }
+      h2 { color: #2563eb; font-size: 1.5rem; margin-top: 2rem; }
+      .banner { width: 100%; border-radius: 1rem; margin-bottom: 2rem; }
+      .info { background: #e0e7ef; border-radius: 1rem; padding: 1rem 1.5rem; margin-bottom: 2rem; }
+      .footer { text-align: center; color: #64748B; font-size: 0.9rem; margin-top: 2rem; }
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .nav { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; }
+      .nav a { font-weight: bold; color: #2563eb; cursor: pointer; }
+      .section { display: none; opacity: 0; transition: opacity 0.5s; min-height: 300px; }
+      .section.active { display: block; opacity: 1; animation: fadeIn 0.5s; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      .member-list { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem; }
+      .member-card { background: #e0e7ef; border-radius: 1rem; padding: 1.5rem; text-align: center; width: 180px; box-shadow: 0 2px 8px 0 rgba(100,116,139,0.08); }
+      .member-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; border: 2px solid #2563eb; }
+      .member-card .name { font-weight: bold; color: #2563eb; }
+      .member-card .role { font-size: 0.95rem; color: #64748B; margin-bottom: 0.3rem; }
+      .pub-list { margin-top: 2rem; }
+      .pub-list ol { padding-left: 1.2em; }
+      .pub-card { background: #e0e7ef; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px 0 rgba(100,116,139,0.08); margin-bottom: 1.2rem; }
+      .pub-title { font-weight: bold; color: #2563eb; margin-bottom: 0.3rem; }
+      .pub-authors { font-size: 0.98rem; color: #64748B; margin-bottom: 0.2rem; }
+      .pub-journal { font-size: 0.95rem; color: #64748B; }
+      .pub-link { color: #2563eb; font-size: 0.95rem; }
+      .note-list { display: flex; flex-direction: column; gap: 1.5rem; }
+      .note-card { background: #e0e7ef; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 8px 0 rgba(100,116,139,0.08); }
+      .note-title { font-weight: bold; color: #2563eb; margin-bottom: 0.3rem; }
+      .note-date { font-size: 0.95rem; color: #64748B; margin-bottom: 0.5rem; }
+      .note-content { color: #64748B; }
+      /* PI 레이아웃 */
+      .pi-flex { display: flex; align-items: center; gap: 2rem; width: 100%; max-width: 500px; background: #e0e7ef; border-radius: 1rem; padding: 1.5rem; margin: 0 auto 2rem auto; box-shadow: 0 2px 8px 0 rgba(100,116,139,0.08); }
+      .pi-flex img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #2563eb; margin-bottom: 0; }
+      .pi-flex .name { font-size: 1.2rem; font-weight: bold; color: #2563eb; }
+      .pi-flex .role { color: #64748B; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('member')">Lab Member</a>
+        <a onclick="showSection('research')">Research</a>
+        <a onclick="showSection('publication')">Publication</a>
+        <a onclick="showSection('note')">Note</a>
+      </nav>
+      <!-- Home Section -->
+      <div id="home" class="section active" style="background: url('/images/atlantic-ocean.jpg') center/cover no-repeat; border-radius: 1.5rem; min-height: 400px;">
+        <div style="background: rgba(255,255,255,0.85); border-radius: 1.5rem; padding: 2.5rem;">
+        <img src="/images/skin-banner.jpg" alt="Skin Biology" class="banner" />
+        <h1>Skin Physiology Research Laboratory</h1>
+        <div class="info">
+          <strong>Dongwon Kim, PhD (Assistant Professor)</strong><br>
+          Department of Biomedical Laboratory Science, Dongseo University<br>
+          Email: <a href="mailto:dkim@dongseo.ac.kr">dkim@dongseo.ac.kr</a>
+        </div>
+        <h2>Research Focus</h2>
+        <ul>
+          <li>Skin barrier regeneration and inflammatory signaling</li>
+          <li>Atopic dermatitis models using keratinocytes and fibroblasts</li>
+          <li>Effects of natural compounds (e.g., Reversine, SH-340)</li>
+          <li>Microfluidic-based 3D skin models</li>
+        </ul>
+        <h2>Contact</h2>
+        <div>
+          47 Jurye-ro, Sasang-gu, Busan, South Korea<br>
+          <a href="mailto:dkim@dongseo.ac.kr">dkim@dongseo.ac.kr</a>
+        </div>
+        <div class="footer">
+          ORCID | Google Scholar | Dongseo University<br>
+          &copy; 2024 Skin Physiology Research Laboratory
+        </div>
+        </div>
+      </div>
+      <!-- Member Section -->
+      <div id="member" class="section">
+        <h1>Lab Member</h1>
+        <h2>Principal Investigator (PI)</h2>
+        <div class="pi-flex">
+          <img src="/images/pi.jpg" alt="Dongwon Kim" />
+          <div style="text-align: left;">
+            <div class="name">Dongwon Kim, PhD</div>
+            <div class="role">Assistant Professor</div>
+            <div>Department of Biomedical Laboratory Science<br>Dongseo University</div>
+            <div style="margin: 0.5rem 0 0.2rem 0; font-size: 0.98rem; color: #64748B;">
+              Korea University (BS)<br>
+              Yonsei University (MS)<br>
+              The Pennsylvania State University (PhD)
+            </div>
+            <div style="margin-top: 0.5rem; font-size: 0.95rem; color: #2563eb;">dkim@dongseo.ac.kr</div>
+          </div>
+        </div>
+        <h2>Current Members</h2>
+        <div class="member-list">
+          <div class="member-card">
+            <img src="/images/alice.jpg" alt="Alice Lee" />
+            <div class="name">Alice Lee</div>
+            <div class="role">PhD Student</div>
+          </div>
+          <div class="member-card">
+            <img src="/images/bob.jpg" alt="Bob Park" />
+            <div class="name">Bob Park</div>
+            <div class="role">Research Assistant</div>
+          </div>
+        </div>
+        <h2>Past Members</h2>
+        <div class="member-list">
+          <div class="member-card">
+            <img src="/images/jane.jpg" alt="Jane Choi" />
+            <div class="name">Jane Choi</div>
+            <div class="role">MSc Graduate</div>
+          </div>
+        </div>
+      </div>
+      <!-- Research Section -->
+      <div id="research" class="section">
+        <h1>Research</h1>
+        <div class="research-list">
+          <div class="research-card">
+            <h2>Skin barrier regeneration and inflammatory signaling</h2>
+            <p>Exploring the mechanisms of skin barrier repair and inflammation using human skin cells.</p>
+          </div>
+          <div class="research-card">
+            <h2>Atopic dermatitis models using keratinocytes and fibroblasts</h2>
+            <p>Developing in vitro models to study atopic dermatitis and test therapeutic strategies.</p>
+          </div>
+          <div class="research-card">
+            <h2>Effects of natural compounds (e.g., Reversine, SH-340)</h2>
+            <p>Investigating the bioactivity of natural compounds on skin cell function and regeneration.</p>
+          </div>
+          <div class="research-card">
+            <h2>Microfluidic-based 3D skin models</h2>
+            <p>Utilizing microfluidic technology to create advanced 3D skin models for research and drug testing.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Publication Section -->
+      <div id="publication" class="section">
+        <h1>Publication</h1>
+        <div class="pub-list">
+          <ol style="padding-left: 1.2em;">
+            <li>
+              <div class="pub-card">
+                <div class="pub-title">The negative regulator CXXC5: making WNT look a little less dishevelled</div>
+                <div class="pub-authors">D Kim, LA Garza</div>
+                <div class="pub-journal"><i>Journal of Investigative Dermatology</i> 137 (11), 2248-2250</div>
+                <a href="#" class="pub-link">Link</a>
+              </div>
+            </li>
+            <li>
+              <div class="pub-card">
+                <div class="pub-title">Simple cell culture media expansion of primary mouse keratinocytes</div>
+                <div class="pub-authors">S Kim, BW Kim, VP Prizmic, E Oh, V Yu, B Evans, D Kim, LA Garza</div>
+                <div class="pub-journal"><i>Journal of Dermatological Science</i> 93 (2), 135-138</div>
+                <a href="#" class="pub-link">Link</a>
+              </div>
+            </li>
+            <li>
+              <div class="pub-card">
+                <div class="pub-title">dsRNA sensing induces loss of cell identity</div>
+                <div class="pub-authors">R Zhou, G Wang, D Kim, S Kim, N Islam, R Chen, Z Wang, A Li, ...</div>
+                <div class="pub-journal"><i>Journal of Investigative Dermatology</i> 139 (1), 91-99</div>
+                <a href="#" class="pub-link">Link</a>
+              </div>
+            </li>
+            <li>
+              <div class="pub-card">
+                <div class="pub-title">To control site-specific skin gene expression, autocrine mimics paracrine canonical Wnt signaling and is activated ectopically in skin disease</div>
+                <div class="pub-authors">D Kim, MZ Hossain, A Nieves, L Gu, TS Ratliff, SM Oh, A Park, S Han, ...</div>
+                <div class="pub-journal"><i>The American Journal of Pathology</i> 186 (5), 1140-1150</div>
+                <a href="#" class="pub-link">Link</a>
+              </div>
+            </li>
+            <li>
+              <div class="pub-card">
+                <div class="pub-title">Injury, dysbiosis, and filaggrin deficiency drive skin inflammation through keratinocyte IL-1α release</div>
+                <div class="pub-authors">NK Archer, JH Jo, SK Lee, D Kim, B Smith, RV Ortines, Y Wang, ...</div>
+                <div class="pub-journal"><i>Journal of Allergy and Clinical Immunology</i> 143 (4), 1426-1443. e6</div>
+                <a href="#" class="pub-link">Link</a>
+              </div>
+            </li>
+            <li>
+              <div class="pub-card">
+                <div class="pub-title">Noncoding dsRNA induces retinoic acid synthesis to stimulate hair follicle regeneration via TLR3</div>
+                <div class="pub-authors">D Kim, R Chen, M Sheu, N Kim, S Kim, N Islam, EM Wier, G Wang, A Li, ...</div>
+                <div class="pub-journal"><i>Nature Communications</i> 10 (1), 2811</div>
+                <a href="#" class="pub-link">Link</a>
+              </div>
+            </li>
+            <li>
+              <div class="pub-card">
+                <div class="pub-title">dsRNA released by tissue damage activates TLR3 to drive skin regeneration</div>
+                <div class="pub-authors">AM Nelson, SK Reddy, TS Ratliff, MZ Hossain, AS Katseff, AS Zhu, ...</div>
+                <div class="pub-journal"><i>Cell Stem Cell</i>. 17 (2), 139-151</div>
+                <a href="#" class="pub-link">Link</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- Note Section -->
+      <div id="note" class="section">
+        <h1>Note</h1>
+        <div class="note-list">
+          <div class="note-card">
+            <div class="note-title">[공지] 홈페이지 오픈 안내</div>
+            <div class="note-date">2024-07-15</div>
+            <div class="note-content">Skin Physiology Research Laboratory 홈페이지가 새롭게 오픈되었습니다. 많은 관심 부탁드립니다.</div>
+          </div>
+          <div class="note-card">
+            <div class="note-title">[공지] 2024년 하계 워크숍 일정</div>
+            <div class="note-date">2024-07-10</div>
+            <div class="note-content">2024년 하계 워크숍이 8월 5일(월)~8월 7일(수) 진행될 예정입니다. 자세한 내용은 추후 공지하겠습니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showSection(id) {
+        document.querySelectorAll('.section').forEach(s => {
+          s.classList.remove('active');
+        });
+        const el = document.getElementById(id);
+        el.classList.add('active');
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
+  </body>
+</html>
